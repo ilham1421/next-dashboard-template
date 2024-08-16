@@ -158,7 +158,6 @@ export async function fetchInvoiceById(id) {
   }
 }
 
-
 export async function fetchCustomers() {
   try {
     const data = await sql`
