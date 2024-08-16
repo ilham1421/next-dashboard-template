@@ -3,7 +3,14 @@ import { formatCurrency } from "./utils";
 
 export async function fetchRevenue() {
   try {
+
+    console.log("Fetching revenue data...");
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
     const data = await sql`SELECT * FROM revenue`;
+
+    console.log("Data fetch completed after 3 seconds.");
+
     return data.rows;
   } catch (error) {
     console.error("Database Error:", error);
@@ -11,6 +18,7 @@ export async function fetchRevenue() {
   }
 }
 
+// Fungsi untuk mengambil data invoice terbaru
 export async function fetchLatestInvoices() {
   try {
     const data = await sql`
@@ -32,6 +40,7 @@ export async function fetchLatestInvoices() {
   }
 }
 
+// Fungsi untuk mengambil data kartu (statistics)
 export async function fetchCardData() {
   try {
     const invoiceCountPromise = sql`SELECT COUNT(*) FROM invoices`;
@@ -67,6 +76,8 @@ export async function fetchCardData() {
 }
 
 const ITEMS_PER_PAGE = 6;
+
+// Fungsi untuk mengambil data invoice yang difilter
 export async function fetchFilteredInvoices(query, currentPage) {
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
@@ -99,6 +110,7 @@ export async function fetchFilteredInvoices(query, currentPage) {
   }
 }
 
+// Fungsi untuk mengambil total halaman invoice yang difilter
 export async function fetchInvoicesPages(query) {
   try {
     const count = await sql`
@@ -121,6 +133,7 @@ export async function fetchInvoicesPages(query) {
   }
 }
 
+// Fungsi untuk mengambil data invoice berdasarkan ID
 export async function fetchInvoiceById(id) {
   try {
     const data = await sql`
