@@ -1,7 +1,7 @@
 // Aktifkan PPR di level komponen
 export const experimental_ppr = true;
 
-import SideNav from "@/app/ui/dashboard/sidenav";
+import SideNav from "../ui/dashboard/sidenav";
 
 export default function Layout({ children }) {
   return (

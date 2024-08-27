@@ -1,6 +1,6 @@
 // /app/layout.jsx
-import "@/app/ui/global.css";
-import { lusitana } from "@/app/ui/fonts";
+import "./ui/global.css";
+import { lusitana } from "./ui/fonts";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
