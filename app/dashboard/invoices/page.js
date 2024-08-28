@@ -1,5 +1,5 @@
 import Pagination from "../../ui/invoices/pagination";
-import Search from "../../ui/search";
+import Search from "../../ui/search.js";
 import Table from "../../ui/invoices/table";
 import { CreateInvoice } from "../../ui/invoices/buttons";
 import { lusitana } from "../../ui/fonts";
@@ -8,7 +8,7 @@ import { InvoicesTableSkeleton } from "../../ui/skeletons";
 import { fetchInvoicesPages } from "../../lib/data";
 
 export default async function Page(searchParams) {
-  const query = searchParams?.query || '';
+  const query = searchParams?.query || "";
   const currentPage = Number(searchParams?.page) || 1;
 
   const totalPages = await fetchInvoicesPages(query);
