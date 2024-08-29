@@ -1,18 +1,18 @@
 // import { Card } from "@/app/ui/dashboard/cards";
-import RevenueChart from "@/app/ui/dashboard/revenue-chart";
-import { lusitana } from "@/app/ui/fonts";
-import { fetchCardData } from "@/app/lib/data";
+import RevenueChart from "../../ui/dashboard/revenue-chart";
+import { lusitana } from "../../ui/fonts";
+import { fetchCardData } from "../../lib/data";
 import { Suspense } from "react";
-import CardWrapper from "@/app/ui/dashboard/cards";
+import CardWrapper from "../../ui/dashboard/cards";
 import {
   RevenueChartSkeleton,
   LatestInvoicesSkeleton,
   CardSkeleton,
-} from "@/app/ui/skeletons";
+} from "../../ui/skeletons";
 import dynamic from "next/dynamic";
 
 const LatestInvoices = dynamic(() =>
-  import("@/app/ui/dashboard/latest-invoices")
+  import("../../ui/dashboard/latest-invoices")
 );
 
 export default async function Page() {
