@@ -1,6 +1,3 @@
-// Aktifkan PPR di level komponen
-export const experimental_ppr = true;
-
 import SideNav from "@/app/ui/dashboard/sidenav";
 >>>>>>> parent of 1217c2e (selesai chapter 10)
 
