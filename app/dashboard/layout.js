@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 // Aktifkan PPR di level komponen
 import SideNav from "../ui/dashboard/sidenav";
 
+=======
+import SideNav from "@/app/ui/dashboard/sidenav";
+>>>>>>> parent of 1217c2e (selesai chapter 10)
 
 export default function Layout({ children }) {
   return (
